@@ -60,6 +60,8 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   {% include dc/intro.html %}
 {% elsif page.carpentry == "lc" %}
   {% include lc/intro.html %}
+{% elsif page.carpentry == "hpc" %}
+  {% include hpc/intro.html %}
 {% endif %}
 
 {% comment %}
@@ -74,6 +76,8 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   {% include dc/who.html %}
 {% elsif page.carpentry == "lc" %}
   {% include lc/who.html %}
+{% elsif page.carpentry == "hpc" %}
+  {% include hpc/who.html %}
 {% endif %}
 
 {% comment %}
@@ -124,6 +128,8 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   Data Carpentry's
   {% elsif page.carpentry == "lc" %}
   Library Carpentry's
+  {% elsif page.carpentry == "hpc" %}
+  HPC Carpentry's
   {% endif %}
   <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
 </p>
@@ -179,12 +185,12 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 
 <hr/>
 
-{% comment %} 
- SURVEYS - DO NOT EDIT SURVEY LINKS 
+{% comment %}
+ SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
 <h2 id="surveys">Surveys</h2>
 
-{% if page.carpentry == "swc" %} 
+{% if page.carpentry == "swc" %}
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 <p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
@@ -214,6 +220,8 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   {% include dc/schedule.html %}
 {% elsif page.carpentry == "lc" %}
   {% include lc/schedule.html %}
+{% elsif page.carpentry == "hpc" %}
+  {% include hpc/schedule.html %}
 {% endif %}
 
 {% comment %}
@@ -259,6 +267,8 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   {% include dc/syllabus.html %}
 {% elsif page.carpentry == "lc" %}
   {% include lc/syllabus.html %}
+{% elsif page.carpentry == "hpc" %}
+  {% include hpc/syllabus.html %}
 {% endif %}
 
 <hr/>
@@ -285,6 +295,8 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   Data Carpentry
   {% elsif page.carpentry == "lc" %}
   Library Carpentry
+  {% elsif page.carpentry == "hpc" %}
+  HPC Carpentry
   {% endif %}
   workshop,
   you will need access to the software described below.
@@ -301,14 +313,14 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 
   <p>
     A large portion of this workshop will involve connecting to and using
-    a remote computing cluster. To do this, we will use a SSH client. 
+    a remote computing cluster. To do this, we will use a SSH client.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="shell-windows">Windows</h4>
       <p>
-      You will need to download and install MobaXterm, 
+      You will need to download and install MobaXterm,
       a widely-used SSH client for Windows.
       MobaXterm can be downloaded from the following link: <a href="https://download.mobatek.net/10520180106182002/MobaXterm_Installer_v10.5.zip">installer</a>.
       </p>
@@ -316,8 +328,8 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
     <div class="col-md-4">
       <h4 id="shell-macosx">macOS</h4>
       <p>
-        macOS ships with an SSH client by default, 
-        so there is no need to install anything. 
+        macOS ships with an SSH client by default,
+        so there is no need to install anything.
         You access Bash and an SSH client from the Terminal
         (found in
         <code>/Applications/Utilities</code>).
@@ -330,7 +342,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
     <div class="col-md-4">
       <h4 id="shell-linux">Linux</h4>
       <p>
-        Linux comes with an SSH client installed by default - 
+        Linux comes with an SSH client installed by default -
         there is no need to install anything.
       </p>
     </div>
@@ -429,4 +441,3 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   </p>
 {% endcomment %}
 </div> {% comment %} End of 'Python' section. {% endcomment %}
-
